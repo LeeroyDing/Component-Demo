@@ -12,6 +12,7 @@
 		14C750CB2270898400B594F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C750C92270898400B594F1 /* Main.storyboard */; };
 		14C750CD2270898500B594F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CC2270898500B594F1 /* Assets.xcassets */; };
 		14C750D02270898500B594F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CE2270898500B594F1 /* LaunchScreen.storyboard */; };
+		14C750DB2270900800B594F1 /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C750DA2270900800B594F1 /* ComponentKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		14C750CC2270898500B594F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C750CF2270898500B594F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14C750D12270898500B594F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14C750DA2270900800B594F1 /* ComponentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C750DB2270900800B594F1 /* ComponentKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				14C750C42270898400B594F1 /* Component Demo */,
 				14C750C32270898400B594F1 /* Products */,
+				14C750D92270900800B594F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				14C750D12270898500B594F1 /* Info.plist */,
 			);
 			path = "Component Demo";
+			sourceTree = "<group>";
+		};
+		14C750D92270900800B594F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14C750DA2270900800B594F1 /* ComponentKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
