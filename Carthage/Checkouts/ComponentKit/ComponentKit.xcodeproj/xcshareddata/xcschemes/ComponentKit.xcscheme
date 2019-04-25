@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0B47AB41CBD924100BB33CE"
-               BuildableName = "ComponentKit.framework"
+               BuildableName = ".framework"
                BlueprintName = "ComponentKit"
                ReferencedContainer = "container:ComponentKit.xcodeproj">
             </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0B47AB41CBD924100BB33CE"
-            BuildableName = "ComponentKit.framework"
+            BuildableName = ".framework"
             BlueprintName = "ComponentKit"
             ReferencedContainer = "container:ComponentKit.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0B47AB41CBD924100BB33CE"
-            BuildableName = "ComponentKit.framework"
+            BuildableName = ".framework"
             BlueprintName = "ComponentKit"
             ReferencedContainer = "container:ComponentKit.xcodeproj">
          </BuildableReference>
@@ -103,7 +103,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0B47AB41CBD924100BB33CE"
-            BuildableName = "ComponentKit.framework"
+            BuildableName = ".framework"
             BlueprintName = "ComponentKit"
             ReferencedContainer = "container:ComponentKit.xcodeproj">
          </BuildableReference>

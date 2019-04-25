@@ -8,22 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		14C750C62270898400B594F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C750C52270898400B594F1 /* AppDelegate.swift */; };
-		14C750C82270898400B594F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C750C72270898400B594F1 /* ViewController.swift */; };
-		14C750CB2270898400B594F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C750C92270898400B594F1 /* Main.storyboard */; };
 		14C750CD2270898500B594F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CC2270898500B594F1 /* Assets.xcassets */; };
 		14C750D02270898500B594F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CE2270898500B594F1 /* LaunchScreen.storyboard */; };
 		14C750DB2270900800B594F1 /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C750DA2270900800B594F1 /* ComponentKit.framework */; };
+		14C750E12270938500B594F1 /* Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C750E02270938500B594F1 /* Initializer.m */; };
+		14C750ED2270981300B594F1 /* RepositoriesCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */; };
+		14C750F722709C3300B594F1 /* RepositoryComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14C750F622709C3300B594F1 /* RepositoryComponent.mm */; };
+		14E26D352271A55800CEC794 /* GitHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D332271A55800CEC794 /* GitHub.xcdatamodeld */; };
+		14E26D3E2271AA8500CEC794 /* RepositoryDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D3D2271AA8500CEC794 /* RepositoryDTO.m */; };
+		14E26D412271AAB100CEC794 /* RepositoryContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D402271AAB100CEC794 /* RepositoryContext.m */; };
+		14E26D442271B57E00CEC794 /* RepositoryContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D432271B57E00CEC794 /* RepositoryContextImpl.swift */; };
+		14E26D552271B9E400CEC794 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E26D542271B9E400CEC794 /* Alamofire.framework */; };
+		14E26D572271BAB500CEC794 /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D562271BAB500CEC794 /* PersistenceContainer.swift */; };
+		14E26D5A2271ED0A00CEC794 /* ChangesetBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14C750C22270898400B594F1 /* Component Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Component Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C750C52270898400B594F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14C750C72270898400B594F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14C750CA2270898400B594F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14C750CC2270898500B594F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C750CF2270898500B594F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14C750D12270898500B594F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14C750DA2270900800B594F1 /* ComponentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Component Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		14C750DF2270938500B594F1 /* Initializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initializer.h; sourceTree = "<group>"; };
+		14C750E02270938500B594F1 /* Initializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initializer.m; sourceTree = "<group>"; };
+		14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoriesCollectionViewController.h; sourceTree = "<group>"; };
+		14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RepositoriesCollectionViewController.mm; sourceTree = "<group>"; };
+		14C750F522709C3300B594F1 /* RepositoryComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryComponent.h; sourceTree = "<group>"; };
+		14C750F622709C3300B594F1 /* RepositoryComponent.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RepositoryComponent.mm; sourceTree = "<group>"; };
+		14E26D342271A55800CEC794 /* GitHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHub.xcdatamodel; sourceTree = "<group>"; };
+		14E26D3C2271AA8500CEC794 /* RepositoryDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryDTO.h; sourceTree = "<group>"; };
+		14E26D3D2271AA8500CEC794 /* RepositoryDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoryDTO.m; sourceTree = "<group>"; };
+		14E26D3F2271AAB100CEC794 /* RepositoryContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryContext.h; sourceTree = "<group>"; };
+		14E26D402271AAB100CEC794 /* RepositoryContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoryContext.m; sourceTree = "<group>"; };
+		14E26D432271B57E00CEC794 /* RepositoryContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryContextImpl.swift; sourceTree = "<group>"; };
+		14E26D542271B9E400CEC794 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E26D562271BAB500CEC794 /* PersistenceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceContainer.swift; sourceTree = "<group>"; };
+		14E26D582271ED0A00CEC794 /* ChangesetBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangesetBuilder.h; sourceTree = "<group>"; };
+		14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ChangesetBuilder.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E26D552271B9E400CEC794 /* Alamofire.framework in Frameworks */,
 				14C750DB2270900800B594F1 /* ComponentKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +69,9 @@
 				14C750C32270898400B594F1 /* Products */,
 				14C750D92270900800B594F1 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		14C750C32270898400B594F1 /* Products */ = {
 			isa = PBXGroup;
@@ -58,12 +84,20 @@
 		14C750C42270898400B594F1 /* Component Demo */ = {
 			isa = PBXGroup;
 			children = (
+				14C750F422709BED00B594F1 /* Components */,
+				14C750F122709B3F00B594F1 /* Contexts */,
+				14C750EE22709A8800B594F1 /* Models */,
 				14C750C52270898400B594F1 /* AppDelegate.swift */,
-				14C750C72270898400B594F1 /* ViewController.swift */,
-				14C750C92270898400B594F1 /* Main.storyboard */,
 				14C750CC2270898500B594F1 /* Assets.xcassets */,
 				14C750CE2270898500B594F1 /* LaunchScreen.storyboard */,
 				14C750D12270898500B594F1 /* Info.plist */,
+				14C750DF2270938500B594F1 /* Initializer.h */,
+				14C750E02270938500B594F1 /* Initializer.m */,
+				14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */,
+				14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */,
+				14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */,
+				14E26D582271ED0A00CEC794 /* ChangesetBuilder.h */,
+				14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */,
 			);
 			path = "Component Demo";
 			sourceTree = "<group>";
@@ -71,9 +105,48 @@
 		14C750D92270900800B594F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14E26D542271B9E400CEC794 /* Alamofire.framework */,
 				14C750DA2270900800B594F1 /* ComponentKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14C750EE22709A8800B594F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14E26D332271A55800CEC794 /* GitHub.xcdatamodeld */,
+				14E26D362271A62200CEC794 /* DTO */,
+				14E26D562271BAB500CEC794 /* PersistenceContainer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14C750F122709B3F00B594F1 /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				14E26D3F2271AAB100CEC794 /* RepositoryContext.h */,
+				14E26D402271AAB100CEC794 /* RepositoryContext.m */,
+				14E26D432271B57E00CEC794 /* RepositoryContextImpl.swift */,
+			);
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		14C750F422709BED00B594F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				14C750F522709C3300B594F1 /* RepositoryComponent.h */,
+				14C750F622709C3300B594F1 /* RepositoryComponent.mm */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		14E26D362271A62200CEC794 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				14E26D3C2271AA8500CEC794 /* RepositoryDTO.h */,
+				14E26D3D2271AA8500CEC794 /* RepositoryDTO.m */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +181,7 @@
 				TargetAttributes = {
 					14C750C12270898400B594F1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -136,7 +210,6 @@
 			files = (
 				14C750D02270898500B594F1 /* LaunchScreen.storyboard in Resources */,
 				14C750CD2270898500B594F1 /* Assets.xcassets in Resources */,
-				14C750CB2270898400B594F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,22 +220,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14C750C82270898400B594F1 /* ViewController.swift in Sources */,
+				14E26D352271A55800CEC794 /* GitHub.xcdatamodeld in Sources */,
+				14E26D3E2271AA8500CEC794 /* RepositoryDTO.m in Sources */,
 				14C750C62270898400B594F1 /* AppDelegate.swift in Sources */,
+				14E26D412271AAB100CEC794 /* RepositoryContext.m in Sources */,
+				14E26D442271B57E00CEC794 /* RepositoryContextImpl.swift in Sources */,
+				14C750E12270938500B594F1 /* Initializer.m in Sources */,
+				14C750F722709C3300B594F1 /* RepositoryComponent.mm in Sources */,
+				14C750ED2270981300B594F1 /* RepositoriesCollectionViewController.mm in Sources */,
+				14E26D5A2271ED0A00CEC794 /* ChangesetBuilder.mm in Sources */,
+				14E26D572271BAB500CEC794 /* PersistenceContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		14C750C92270898400B594F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14C750CA2270898400B594F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		14C750CE2270898500B594F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Component Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +376,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.Component-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Component Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -311,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Component Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,6 +396,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.Component-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Component Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,6 +424,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14E26D332271A55800CEC794 /* GitHub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14E26D342271A55800CEC794 /* GitHub.xcdatamodel */,
+			);
+			currentVersion = 14E26D342271A55800CEC794 /* GitHub.xcdatamodel */;
+			path = GitHub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 14C750BA2270898400B594F1 /* Project object */;
 }

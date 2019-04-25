@@ -1,1 +1,2 @@
-github "facebook/ComponentKit" "0.25"
+github "Alamofire/Alamofire" "4.8.2"
+github "facebook/ComponentKit" "0.26"
