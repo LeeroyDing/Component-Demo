@@ -87,17 +87,13 @@
 				14C750F422709BED00B594F1 /* Components */,
 				14C750F122709B3F00B594F1 /* Contexts */,
 				14C750EE22709A8800B594F1 /* Models */,
+				14E26D5C227202F000CEC794 /* View Controller */,
+				14E26D5D2272030E00CEC794 /* Bridging */,
+				14E26D5E2272032000CEC794 /* Util */,
 				14C750C52270898400B594F1 /* AppDelegate.swift */,
 				14C750CC2270898500B594F1 /* Assets.xcassets */,
 				14C750CE2270898500B594F1 /* LaunchScreen.storyboard */,
 				14C750D12270898500B594F1 /* Info.plist */,
-				14C750DF2270938500B594F1 /* Initializer.h */,
-				14C750E02270938500B594F1 /* Initializer.m */,
-				14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */,
-				14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */,
-				14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */,
-				14E26D582271ED0A00CEC794 /* ChangesetBuilder.h */,
-				14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */,
 			);
 			path = "Component Demo";
 			sourceTree = "<group>";
@@ -147,6 +143,34 @@
 				14E26D3D2271AA8500CEC794 /* RepositoryDTO.m */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		14E26D5C227202F000CEC794 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */,
+				14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		14E26D5D2272030E00CEC794 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				14C750DF2270938500B594F1 /* Initializer.h */,
+				14C750E02270938500B594F1 /* Initializer.m */,
+				14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		14E26D5E2272032000CEC794 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				14E26D582271ED0A00CEC794 /* ChangesetBuilder.h */,
+				14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,7 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.Component-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Component Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Bridging/Component Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,7 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.Component-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Component Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Component Demo/Bridging/Component Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -25,8 +25,22 @@ class PersistenceContainer {
     container.viewContext.automaticallyMergesChangesFromParent = true
   }
 
+  func clearRepositories() {
+    let context = container.newBackgroundContext()
+    context.performAndWait {
+      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Repository")
+      fetchRequest.predicate = nil
+      fetchRequest.sortDescriptors = [.init(key: "id", ascending: true)];  // doesn't matter
+      for obj in try! context.fetch(fetchRequest) {
+        context.delete(obj)
+      }
+      try! context.save()
+    }
+  }
+
   func upsert(repositories: [RepositoryDTO]) {
-    container.performBackgroundTask { context in
+    let context = container.newBackgroundContext()
+    context.performAndWait {
       context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
       for dto in repositories {
         let entity = Repository(context: context)

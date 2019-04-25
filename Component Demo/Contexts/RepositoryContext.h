@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RepositoryContext : NSObject
 
 + (instancetype)newContext;
-- (void)fetchRepositories;
+- (void)fetchRepositories:(void (^_Nonnull)(void))completion;;
 - (NSFetchedResultsController *)repositoriesList;
 
 @end

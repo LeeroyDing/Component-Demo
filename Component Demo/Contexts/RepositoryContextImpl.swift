@@ -14,9 +14,10 @@ class RepositoryContextImpl: RepositoryContext {
   private let queue = DispatchQueue.init(label: "Repository")
   private let dateFormatter = ISO8601DateFormatter()
 
-  override func fetchRepositories() {
+  override func fetchRepositories(_ completion: @escaping () -> Void) {
     request("https://api.github.com/users/github/repos?sort=pushed&direction=desc")
       .responseJSON(queue: queue, options: []) { [dateFormatter](response) in
+        sleep(2)
         guard case let .success(json) = response.result,
           let data = json as? [[String: Any]]
           else { fatalError() }
@@ -32,7 +33,9 @@ class RepositoryContextImpl: RepositoryContext {
           dto.pushedAt = pushedAt
           return dto
         }
+        PersistenceContainer.shared.clearRepositories()
         PersistenceContainer.shared.upsert(repositories: dtos)
+        completion()
     }
   }
 
