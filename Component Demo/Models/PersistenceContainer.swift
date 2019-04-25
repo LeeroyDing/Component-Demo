@@ -51,6 +51,38 @@ class PersistenceContainer {
       try! context.save()
     }
   }
+
+  func clearTrendingRepos() {
+    let context = container.newBackgroundContext()
+    context.performAndWait {
+      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TrendingRepo")
+      fetchRequest.predicate = nil
+      fetchRequest.sortDescriptors = [.init(key: "rank", ascending: true)];  // doesn't matter
+      for obj in try! context.fetch(fetchRequest) {
+        context.delete(obj)
+      }
+      try! context.save()
+    }
+  }
+
+  func upsert(trendingRepos: [TrendingRepoDTO]) {
+    let context = container.newBackgroundContext()
+    context.performAndWait {
+      context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+      for dto in trendingRepos {
+        let entity = TrendingRepo(context: context)
+        entity.author = dto.author
+        entity.desc = dto.desc
+        entity.forkCount = dto.forkCount
+        entity.language = dto.language
+        entity.name = dto.name
+        entity.rank = dto.rank
+        entity.starCount = dto.starCount
+        entity.starsToday = dto.starsToday
+      }
+      try! context.save()
+    }
+  }
 }
 
 extension Repository {

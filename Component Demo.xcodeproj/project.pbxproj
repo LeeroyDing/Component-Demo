@@ -21,6 +21,12 @@
 		14E26D552271B9E400CEC794 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E26D542271B9E400CEC794 /* Alamofire.framework */; };
 		14E26D572271BAB500CEC794 /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D562271BAB500CEC794 /* PersistenceContainer.swift */; };
 		14E26D5A2271ED0A00CEC794 /* ChangesetBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */; };
+		14E26D61227205F700CEC794 /* TrendingRepoDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D60227205F700CEC794 /* TrendingRepoDTO.m */; };
+		14E26D64227207F000CEC794 /* TrendingRepoComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D63227207F000CEC794 /* TrendingRepoComponent.mm */; };
+		14E26D672272084900CEC794 /* TrendingRepoContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D662272084900CEC794 /* TrendingRepoContext.m */; };
+		14E26D69227208F300CEC794 /* TrendingRepoContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D68227208F300CEC794 /* TrendingRepoContextImpl.swift */; };
+		14E26D6E22720CD000CEC794 /* TrendingReposCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D6D22720CD000CEC794 /* TrendingReposCollectionViewController.mm */; };
+		14E26D7022720E2900CEC794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E26D6F22720E2900CEC794 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,16 @@
 		14E26D562271BAB500CEC794 /* PersistenceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceContainer.swift; sourceTree = "<group>"; };
 		14E26D582271ED0A00CEC794 /* ChangesetBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangesetBuilder.h; sourceTree = "<group>"; };
 		14E26D592271ED0A00CEC794 /* ChangesetBuilder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ChangesetBuilder.mm; sourceTree = "<group>"; };
+		14E26D5F227205F700CEC794 /* TrendingRepoDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendingRepoDTO.h; sourceTree = "<group>"; };
+		14E26D60227205F700CEC794 /* TrendingRepoDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendingRepoDTO.m; sourceTree = "<group>"; };
+		14E26D62227207F000CEC794 /* TrendingRepoComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendingRepoComponent.h; sourceTree = "<group>"; };
+		14E26D63227207F000CEC794 /* TrendingRepoComponent.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TrendingRepoComponent.mm; sourceTree = "<group>"; };
+		14E26D652272084900CEC794 /* TrendingRepoContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendingRepoContext.h; sourceTree = "<group>"; };
+		14E26D662272084900CEC794 /* TrendingRepoContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendingRepoContext.m; sourceTree = "<group>"; };
+		14E26D68227208F300CEC794 /* TrendingRepoContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoContextImpl.swift; sourceTree = "<group>"; };
+		14E26D6C22720CD000CEC794 /* TrendingReposCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendingReposCollectionViewController.h; sourceTree = "<group>"; };
+		14E26D6D22720CD000CEC794 /* TrendingReposCollectionViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TrendingReposCollectionViewController.mm; sourceTree = "<group>"; };
+		14E26D6F22720E2900CEC794 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,7 @@
 				14C750C52270898400B594F1 /* AppDelegate.swift */,
 				14C750CC2270898500B594F1 /* Assets.xcassets */,
 				14C750CE2270898500B594F1 /* LaunchScreen.storyboard */,
+				14E26D6F22720E2900CEC794 /* Main.storyboard */,
 				14C750D12270898500B594F1 /* Info.plist */,
 			);
 			path = "Component Demo";
@@ -123,6 +140,9 @@
 				14E26D3F2271AAB100CEC794 /* RepositoryContext.h */,
 				14E26D402271AAB100CEC794 /* RepositoryContext.m */,
 				14E26D432271B57E00CEC794 /* RepositoryContextImpl.swift */,
+				14E26D652272084900CEC794 /* TrendingRepoContext.h */,
+				14E26D662272084900CEC794 /* TrendingRepoContext.m */,
+				14E26D68227208F300CEC794 /* TrendingRepoContextImpl.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -132,6 +152,8 @@
 			children = (
 				14C750F522709C3300B594F1 /* RepositoryComponent.h */,
 				14C750F622709C3300B594F1 /* RepositoryComponent.mm */,
+				14E26D62227207F000CEC794 /* TrendingRepoComponent.h */,
+				14E26D63227207F000CEC794 /* TrendingRepoComponent.mm */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -141,6 +163,8 @@
 			children = (
 				14E26D3C2271AA8500CEC794 /* RepositoryDTO.h */,
 				14E26D3D2271AA8500CEC794 /* RepositoryDTO.m */,
+				14E26D5F227205F700CEC794 /* TrendingRepoDTO.h */,
+				14E26D60227205F700CEC794 /* TrendingRepoDTO.m */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -150,6 +174,8 @@
 			children = (
 				14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */,
 				14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */,
+				14E26D6C22720CD000CEC794 /* TrendingReposCollectionViewController.h */,
+				14E26D6D22720CD000CEC794 /* TrendingReposCollectionViewController.mm */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -232,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E26D7022720E2900CEC794 /* Main.storyboard in Resources */,
 				14C750D02270898500B594F1 /* LaunchScreen.storyboard in Resources */,
 				14C750CD2270898500B594F1 /* Assets.xcassets in Resources */,
 			);
@@ -244,14 +271,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E26D69227208F300CEC794 /* TrendingRepoContextImpl.swift in Sources */,
+				14E26D6E22720CD000CEC794 /* TrendingReposCollectionViewController.mm in Sources */,
 				14E26D352271A55800CEC794 /* GitHub.xcdatamodeld in Sources */,
 				14E26D3E2271AA8500CEC794 /* RepositoryDTO.m in Sources */,
+				14E26D672272084900CEC794 /* TrendingRepoContext.m in Sources */,
 				14C750C62270898400B594F1 /* AppDelegate.swift in Sources */,
 				14E26D412271AAB100CEC794 /* RepositoryContext.m in Sources */,
 				14E26D442271B57E00CEC794 /* RepositoryContextImpl.swift in Sources */,
 				14C750E12270938500B594F1 /* Initializer.m in Sources */,
+				14E26D64227207F000CEC794 /* TrendingRepoComponent.mm in Sources */,
 				14C750F722709C3300B594F1 /* RepositoryComponent.mm in Sources */,
 				14C750ED2270981300B594F1 /* RepositoriesCollectionViewController.mm in Sources */,
+				14E26D61227205F700CEC794 /* TrendingRepoDTO.m in Sources */,
 				14E26D5A2271ED0A00CEC794 /* ChangesetBuilder.mm in Sources */,
 				14E26D572271BAB500CEC794 /* PersistenceContainer.swift in Sources */,
 			);

@@ -6,7 +6,6 @@
 //  Copyright © 2019 IG Group. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 import CoreData
 
@@ -15,9 +14,10 @@ class RepositoryContextImpl: RepositoryContext {
   private let dateFormatter = ISO8601DateFormatter()
 
   override func fetchRepositories(_ completion: @escaping () -> Void) {
+    debugPrint("Start fetching")
     request("https://api.github.com/users/github/repos?sort=pushed&direction=desc")
       .responseJSON(queue: queue, options: []) { [dateFormatter](response) in
-        sleep(2)
+        debugPrint("Start parsing")
         guard case let .success(json) = response.result,
           let data = json as? [[String: Any]]
           else { fatalError() }
@@ -33,8 +33,10 @@ class RepositoryContextImpl: RepositoryContext {
           dto.pushedAt = pushedAt
           return dto
         }
+        debugPrint("Start saving...")
         PersistenceContainer.shared.clearRepositories()
         PersistenceContainer.shared.upsert(repositories: dtos)
+        debugPrint("finished")
         completion()
     }
   }

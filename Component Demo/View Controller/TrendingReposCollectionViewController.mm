@@ -1,33 +1,34 @@
 //
-//  RepositoriesCollectionViewController.mm
+//  TrendingReposCollectionViewController.m
 //  Component Demo
 //
-//  Created by Sicheng Ding on 24/04/2019.
+//  Created by Sicheng Ding on 25/04/2019.
 //  Copyright © 2019 IG Group. All rights reserved.
 //
 
-#import "RepositoriesCollectionViewController.h"
+#import "TrendingReposCollectionViewController.h"
+
 #import <ComponentKit/ComponentKit.h>
 #import <CoreData/CoreData.h>
 
-#import "RepositoryComponent.h"
-#import "RepositoryDTO.h"
-#import "RepositoryContext.h"
+#import "TrendingRepoComponent.h"
+#import "TrendingRepoDTO.h"
+#import "TrendingRepoContext.h"
 #import "ChangesetBuilder.h"
 
-@interface RepositoriesCollectionViewController () <CKComponentProvider, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate>
+@interface TrendingReposCollectionViewController () <CKComponentProvider, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, retain) CKCollectionViewDataSource *dataSource;
 @property (nonatomic, retain) CKComponentFlexibleSizeRangeProvider *sizeRangeProvider;
 @property (nonatomic, retain, nullable) ChangesetBuilder *changesetBuilder;
 @property (nonatomic, retain, nullable) NSFetchedResultsController *frc;
-@property (nonatomic, retain, nullable) RepositoryContext *repositoryContext;
+@property (nonatomic, retain, nullable) TrendingRepoContext *trendingRepoContext;
 @property (nonatomic, retain, nullable) UIRefreshControl *refreshControl;
 
 @end
 
-@implementation RepositoriesCollectionViewController
+@implementation TrendingReposCollectionViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -41,7 +42,7 @@
   [self.refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
   [self.collectionView addSubview:self.refreshControl];
 
-  RepositoryContext *context = [RepositoryContext newContext];
+  TrendingRepoContext *context = [TrendingRepoContext newContext];
 
   // Size configuration
   self.sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
@@ -57,10 +58,10 @@
                      supplementaryViewDataSource:nil
                      configuration:configuration];
 
-  self.frc = [context repositoriesList];
+  self.frc = [context trendingRepoList];
   self.frc.delegate = self;
   [self.frc performFetch:nil];
-  self.repositoryContext = context;
+  self.trendingRepoContext = context;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,7 +72,7 @@
 
 - (void)loadData {
   __weak UIRefreshControl *refreshControl = self.refreshControl;
-  [self.repositoryContext fetchRepositories:^{
+  [self.trendingRepoContext fetchTrendingRepos:^{
     dispatch_async(dispatch_get_main_queue(), ^{
       [refreshControl endRefreshing];
     });
@@ -100,9 +101,9 @@
 
 #pragma mark - CKComponentProvider
 
-+ (CKComponent *)componentForModel:(RepositoryDTO *)repository context:(RepositoryContext *)context
++ (CKComponent *)componentForModel:(TrendingRepoDTO *)trendingRepo context:(TrendingRepoContext *)context
 {
-  return [RepositoryComponent newWithRepository:repository context:context];
+  return [TrendingRepoComponent newWithTrendingRepo:trendingRepo context:context];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
@@ -129,7 +130,7 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-  RepositoryDTO *dto = [RepositoryDTO newFromEntity:anObject];
+  TrendingRepoDTO *dto = [TrendingRepoDTO newWithEntity:anObject];
   switch(type) {
     case NSFetchedResultsChangeInsert:
       self.changesetBuilder = [self.changesetBuilder withInsertedItems:@{newIndexPath: dto}];

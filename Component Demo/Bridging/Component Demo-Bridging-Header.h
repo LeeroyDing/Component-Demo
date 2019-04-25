@@ -5,3 +5,5 @@
 #import "Initializer.h"
 #import "RepositoryDTO.h"
 #import "RepositoryContext.h"
+#import "TrendingRepoDTO.h"
+#import "TrendingRepoContext.h"

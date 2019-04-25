@@ -12,13 +12,14 @@
 @implementation Initializer
 
 + (UIViewController *)getRootViewController {
-  UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-  [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-  [flowLayout setMinimumInteritemSpacing:0];
-  [flowLayout setMinimumLineSpacing:0];
-
-  RepositoriesCollectionViewController *viewController = [[RepositoriesCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-  return viewController;
+  return nil;
+//  UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//  [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+//  [flowLayout setMinimumInteritemSpacing:0];
+//  [flowLayout setMinimumLineSpacing:0];
+//
+//  RepositoriesCollectionViewController *viewController = [[RepositoriesCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+//  return viewController;
 }
 
 @end

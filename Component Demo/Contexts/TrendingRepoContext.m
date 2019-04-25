@@ -1,25 +1,25 @@
 //
-//  RepositoryContext.m
+//  TrendingRepoContext.m
 //  Component Demo
 //
 //  Created by Sicheng Ding on 25/04/2019.
 //  Copyright © 2019 IG Group. All rights reserved.
 //
 
-#import "RepositoryContext.h"
+#import "TrendingRepoContext.h"
 #import "Component_Demo-Swift.h"
 
-@implementation RepositoryContext
+@implementation TrendingRepoContext
 
 + (instancetype)newContext {
-  return [[RepositoryContextImpl alloc] init];
+  return [[TrendingRepoContextImpl alloc] init];
 }
 
-- (void)fetchRepositories:(void (^)(void))completion {
+- (void)fetchTrendingRepos:(void (^)(void))completion {
   [self doesNotRecognizeSelector:_cmd];
 }
 
-- (NSFetchedResultsController *)repositoriesList {
+- (NSFetchedResultsController *)trendingRepoList {
   [self doesNotRecognizeSelector:_cmd];
   return nil;
 }
