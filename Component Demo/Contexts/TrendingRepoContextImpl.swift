@@ -11,14 +11,27 @@ import CoreData
 
 class TrendingRepoContextImpl: TrendingRepoContext {
   private let queue = DispatchQueue.init(label: "TrendingRepo")
+  private let sessionManager: SessionManager
+
+  override init() {
+    let policies: [String: ServerTrustPolicy] = [
+      "github-trending-api.now.sh": .disableEvaluation
+    ]
+    sessionManager = SessionManager(
+      serverTrustPolicyManager: .init(policies: policies))
+    super.init()
+  }
 
   override func fetchTrendingRepos(_ completion: @escaping () -> Void) {
-    request("https://github-trending-api.now.sh/repositories")
+    sessionManager.request("https://github-trending-api.now.sh/repositories")
       .responseJSON(queue: queue, options: []) { (response) in
         sleep(2)
         guard case let .success(json) = response.result,
           let data = json as? [[String: Any]]
-          else { fatalError() }
+          else {
+            completion()
+            return
+        }
         let dtos: [TrendingRepoDTO] = data.enumerated().compactMap {
           guard let author = $1["author"] as? String,
             let desc = $1["description"] as? String,
@@ -47,9 +60,9 @@ class TrendingRepoContextImpl: TrendingRepoContext {
   }
 
   override func trendingRepoList() -> NSFetchedResultsController<NSFetchRequestResult> {
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Repository")
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TrendingRepo")
     fetchRequest.predicate = nil
-    fetchRequest.sortDescriptors = [.init(key: "pushedAt", ascending: false)]
+    fetchRequest.sortDescriptors = [.init(key: "rank", ascending: true)]
     let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: PersistenceContainer.shared.viewContext, sectionNameKeyPath: nil, cacheName: nil)
     return frc
   }

@@ -101,8 +101,7 @@
 
 #pragma mark - CKComponentProvider
 
-+ (CKComponent *)componentForModel:(TrendingRepoDTO *)trendingRepo context:(TrendingRepoContext *)context
-{
++ (CKComponent *)componentForModel:(TrendingRepoDTO *)trendingRepo context:(TrendingRepoContext *)context {
   return [TrendingRepoComponent newWithTrendingRepo:trendingRepo context:context];
 }
 
