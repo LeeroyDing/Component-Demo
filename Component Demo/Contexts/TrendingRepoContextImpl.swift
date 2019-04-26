@@ -14,6 +14,8 @@ class TrendingRepoContextImpl: TrendingRepoContext {
   private let sessionManager: SessionManager
 
   override init() {
+    // Zscaler workaround
+    // Best software ever
     let policies: [String: ServerTrustPolicy] = [
       "github-trending-api.now.sh": .disableEvaluation
     ]
@@ -53,6 +55,7 @@ class TrendingRepoContextImpl: TrendingRepoContext {
           dto.starsToday = starsToday
           return dto
         }
+        // Should be injected!
         PersistenceContainer.shared.clearTrendingRepos()
         PersistenceContainer.shared.upsert(trendingRepos: dtos)
         completion()

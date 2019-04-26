@@ -11,6 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// This class wraps around CKDataSourceChangesetBuilder
+/// Because calling insert items method multiple times in the original
+/// changeset builder will override the previous result, instead of appending
 @interface ChangesetBuilder<__covariant ModelType> : NSObject
 
 - (instancetype)withUpdatedItems:(NSDictionary<NSIndexPath *, ModelType> *)updatedItems;

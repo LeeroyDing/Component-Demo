@@ -34,6 +34,7 @@ class RepositoryContextImpl: RepositoryContext {
           return dto
         }
         debugPrint("Start saving...")
+        // Should be injected!
         PersistenceContainer.shared.clearRepositories()
         PersistenceContainer.shared.upsert(repositories: dtos)
         debugPrint("finished")

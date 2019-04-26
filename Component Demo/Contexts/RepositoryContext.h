@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// This class is a bridge to introduce the underlying Swift context to the View Controller
 @interface RepositoryContext : NSObject
 
 + (instancetype)newContext;

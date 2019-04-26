@@ -63,10 +63,6 @@
   self.repositoryContext = context;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-}
-
 #pragma mark - Private
 
 - (void)loadData {
