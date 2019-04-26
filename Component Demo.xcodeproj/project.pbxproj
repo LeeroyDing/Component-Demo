@@ -11,7 +11,6 @@
 		14C750CD2270898500B594F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CC2270898500B594F1 /* Assets.xcassets */; };
 		14C750D02270898500B594F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C750CE2270898500B594F1 /* LaunchScreen.storyboard */; };
 		14C750DB2270900800B594F1 /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C750DA2270900800B594F1 /* ComponentKit.framework */; };
-		14C750E12270938500B594F1 /* Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C750E02270938500B594F1 /* Initializer.m */; };
 		14C750ED2270981300B594F1 /* RepositoriesCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */; };
 		14C750F722709C3300B594F1 /* RepositoryComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14C750F622709C3300B594F1 /* RepositoryComponent.mm */; };
 		14E26D352271A55800CEC794 /* GitHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E26D332271A55800CEC794 /* GitHub.xcdatamodeld */; };
@@ -37,8 +36,6 @@
 		14C750D12270898500B594F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14C750DA2270900800B594F1 /* ComponentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Component Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		14C750DF2270938500B594F1 /* Initializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initializer.h; sourceTree = "<group>"; };
-		14C750E02270938500B594F1 /* Initializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initializer.m; sourceTree = "<group>"; };
 		14C750EB2270981200B594F1 /* RepositoriesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoriesCollectionViewController.h; sourceTree = "<group>"; };
 		14C750EC2270981200B594F1 /* RepositoriesCollectionViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RepositoriesCollectionViewController.mm; sourceTree = "<group>"; };
 		14C750F522709C3300B594F1 /* RepositoryComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryComponent.h; sourceTree = "<group>"; };
@@ -183,8 +180,6 @@
 		14E26D5D2272030E00CEC794 /* Bridging */ = {
 			isa = PBXGroup;
 			children = (
-				14C750DF2270938500B594F1 /* Initializer.h */,
-				14C750E02270938500B594F1 /* Initializer.m */,
 				14C750DE2270938400B594F1 /* Component Demo-Bridging-Header.h */,
 			);
 			path = Bridging;
@@ -279,7 +274,6 @@
 				14C750C62270898400B594F1 /* AppDelegate.swift in Sources */,
 				14E26D412271AAB100CEC794 /* RepositoryContext.m in Sources */,
 				14E26D442271B57E00CEC794 /* RepositoryContextImpl.swift in Sources */,
-				14C750E12270938500B594F1 /* Initializer.m in Sources */,
 				14E26D64227207F000CEC794 /* TrendingRepoComponent.mm in Sources */,
 				14C750F722709C3300B594F1 /* RepositoryComponent.mm in Sources */,
 				14C750ED2270981300B594F1 /* RepositoriesCollectionViewController.mm in Sources */,
